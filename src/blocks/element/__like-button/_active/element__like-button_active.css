@@ -4,3 +4,10 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.element__like-button_active {
+  transition: transform 0.3s ease-out;
+}
+.element__like-button_active:hover {
+  transform: scale(1.2);
+}

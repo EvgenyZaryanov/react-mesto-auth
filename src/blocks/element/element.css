@@ -6,3 +6,7 @@
   background: #ffffff;
   border-radius: 10px;
 }
+
+.element:hover {
+  box-shadow: -5px -5px 10px 2px lightblue;
+}

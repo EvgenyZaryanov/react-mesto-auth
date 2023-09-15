@@ -8,6 +8,7 @@
   padding: 0;
   color: #545454;
 }
+
 @media screen and (max-width: 426px) {
   .footer__text {
     font-size: 14px;
