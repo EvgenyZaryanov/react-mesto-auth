@@ -29,4 +29,4 @@
 
 - Добавить интерактивную валидацию форм
 
-[Ссылка на проект](https://evgenyzaryanov.github.io/mesto/index.html)
+[Ссылка на проект](https://evgenyzaryanov.github.io/react-mesto-auth)
