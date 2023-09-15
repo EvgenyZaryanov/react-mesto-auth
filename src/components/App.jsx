@@ -63,12 +63,17 @@ function App() {
   }, []);
 
   const handleTokenCheck = jwt => {
-    auth.checkToken(jwt).then(res => {
-      if (res) {
-        setLoggedIn(true);
-        navigate('/', { replace: true });
-      }
-    });
+    auth
+      .checkToken(jwt)
+      .then(res => {
+        if (res) {
+          setLoggedIn(true);
+          navigate('/', { replace: true });
+        }
+      })
+      .catch(err => {
+        console.log(`Ошибка доступа: ${err}`);
+      });
   };
 
   React.useEffect(() => {
@@ -122,7 +127,7 @@ function App() {
     localStorage.removeItem('jwt');
     setLoggedIn(false);
     setUserEmail('');
-    navigate('/sign-in', { replace: true });
+    navigate('/sign-in', { replace: true }).catch(err => console.log(`Ой!...: ${err}`));
   };
 
   function handleEditAvatarClick() {
